@@ -46,6 +46,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs',{
+        pageTitle: 'Projects Page',
+        currentYear: new Date().getFullYear()
+    });
+});
+
 app.get('/bad', (req,res) => {
     res.send({
         errorMessage:'Sorry, unable to fulfill your request.'
